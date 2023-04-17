@@ -409,9 +409,9 @@ body {
 }
 .footer-conteiner {
 	display: flex;
-	gap: 120px;
 }
 .footer-logo-box {
+	margin-right: 120px;
 }
 .footer-logo {
 	font-family: "Raleway", sans-serif;
@@ -427,10 +427,11 @@ body {
 
 .footer-text {
 	color: var(--second-bgr-color);
-	max-width: 264px;
+	min-width: 264px;
 }
 
 .footer-soc-wrap {
+	margin-right: 80px;
 }
 .footer-subtitle {
 	font-weight: 500;
@@ -465,6 +466,64 @@ body {
 }
 .footer-soc-link:is(:hover, :focus) {
 	background-color: #31d0aa;
+}
+
+.subscribe {
+}
+.subscribe-form {
+	display: flex;
+	gap: 24px;
+}
+
+.subscribe-wrap {
+	width: 284px;
+}
+
+.subscribe-input {
+	width: 264px;
+	height: 40px;
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	border-radius: 4px;
+	padding-left: 16px;
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: 400;
+	line-height: 2;
+}
+.subscribe-input::placeholder {
+	color: #ffffff;
+}
+.subscribe-input:focus {
+	border-color: var(--primary-state-color);
+}
+
+.input-btn {
+	width: 100%;
+	height: 40px;
+}
+
+.subscribe-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	max-width: 165px;
+	padding: 8px 24px;
+	margin-left: 0;
+	color: var(--main-bgr-color);
+	border: 1px solid transparent;
+	background: var(--primary-state-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	transition: background-color var(--typical-transitions);
+}
+
+.subscribe-btn:is(:hover, :focus) {
+	background-color: var(--pressed-state-color);
+}
+.subscribe-icon {
+	margin-left: 16px;
+	fill: currentColor;
 }
 
 /** --------------- PORTFOLIO ----------------- */
@@ -582,9 +641,9 @@ body {
 	top: 0;
 	left: 0;
 	background: rgba(46, 47, 66, 0.4);
-	display: flex;
+	/* display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: center; */
 	opacity: 1;
 	transition: opacity var(--typical-transitions),
 		visibility var(--typical-transitions);
@@ -642,17 +701,14 @@ body {
 .modal-form {
 }
 
-.modal-field {
-}
-
 .input-text {
 	display: inline-block;
-	font-size: 12px;
 	margin-bottom: 4px;
+	color: var(--subtle-text-color);
 }
 
 .input-wrap {
-	margin-bottom: 8px;
+	margin-bottom: 4px;
 	position: relative;
 }
 /*? focus-within */
@@ -664,13 +720,6 @@ body {
 .input-wrap:focus-within .modal-icon {
 	fill: var(--primary-state-color);
 } */
-
-.modal-icon {
-	position: absolute;
-	left: 16px;
-	top: 50%;
-	transform: translateY(-50%);
-}
 
 .modal-input {
 	width: 100%;
@@ -690,8 +739,14 @@ body {
 	fill: var(--primary-state-color);
 }
 
-.modal-input::placeholder {
-	color: #31d0aa;
+.modal-field {
+}
+
+.modal-icon {
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .modal-textarea {
@@ -703,31 +758,45 @@ body {
 	font-size: 12px;
 	padding: 8px 16px;
 	resize: none;
-	margin-bottom: 10px;
+	margin-bottom: 14px;
 }
 
 .modal-textarea:focus {
 	border-color: var(--primary-state-color);
 }
 
-.modal-form-fieldset {
+.modal-textarea::placeholder {
+	color: rgba(46, 47, 66, 0.4);
+}
+
+.check-text {
+	font-size: 12px;
 	display: flex;
-	column-gap: 8px;
-	margin-bottom: 24px;
+	align-items: center;
 }
 
-.modal-form-checkbox {
-}
-.modal-form-description {
+.check-text span {
+	width: 16px;
+	height: 16px;
+	border: 1px solid rgba(46, 47, 66, 0.4);
+	border-radius: 2px;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	fill: transparent;
 }
 
-.privacy-policy {
-	text-decoration: underline;
+.input-check:checked + .check-text span {
+	background-color: var(--pressed-state-color);
+	border: none;
+	fill: var(--second-bgr-color);
 }
 
 .modal-form-btn-wrapper {
 	display: flex;
 	justify-content: center;
+	margin-top: 24px;
 }
 
 .modal-form-btn {
