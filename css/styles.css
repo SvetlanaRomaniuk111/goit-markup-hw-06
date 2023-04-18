@@ -704,6 +704,11 @@ body {
 .modal-field {
 	margin-bottom: 8px;
 }
+
+.modal-comment {
+	margin-bottom: 18px;
+}
+
 .input-text {
 	display: block;
 	margin-bottom: 4px;
