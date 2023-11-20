@@ -278,8 +278,6 @@ body {
 	color: var(--main-text-color);
 	margin-bottom: 8px;
 }
-.about-subtitle {
-}
 
 .about-text {
 	color: var(--second-text-color);
